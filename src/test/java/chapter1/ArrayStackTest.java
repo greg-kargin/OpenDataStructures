@@ -10,7 +10,7 @@ public class ArrayStackTest {
     void testAdd() {
         ArrayStack<Integer> arrayStack = new ArrayStack<>();
         arrayStack.add(0, 10);
-        assertEquals(arrayStack.get(0), new Integer(10));
+        assertEquals(new Integer(10), arrayStack.get(0));
     }
 
     @Test
@@ -23,7 +23,7 @@ public class ArrayStackTest {
             array[i] = i;
         }
         for (int i = 0; i < n; i++)
-            assertEquals(arrayStack.get(i), new Integer(array[i]));
+            assertEquals(new Integer(array[i]), arrayStack.get(i));
     }
 
     @Test
@@ -33,7 +33,7 @@ public class ArrayStackTest {
         for (int i = 0; i < n; i++)
             arrayStack.add(i, i);
         arrayStack.set(n/2, n * 2);
-        assertEquals(arrayStack.get(n/2), new Integer(n * 2));
+        assertEquals(new Integer(n * 2), arrayStack.get(n/2));
     }
 
     @Test
@@ -54,7 +54,7 @@ public class ArrayStackTest {
         for (int i = 0; i < n/2; i++)
             arrayStack.remove(0);
         for (int i = 0; i < n/2; i++)
-            assertEquals(arrayStack.get(i), new Integer(i + n/2));
+            assertEquals(new Integer(i + n/2), arrayStack.get(i));
 
     }
 }

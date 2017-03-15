@@ -13,6 +13,6 @@ public class ArrayQueueTest {
         for (int i = 0; i < n; i++)
             queue.add(i);
         for (int i = 0; i < n; i++)
-            assertEquals(queue.remove(), new Integer(i));
+            assertEquals(new Integer(i), queue.remove());
     }
 }

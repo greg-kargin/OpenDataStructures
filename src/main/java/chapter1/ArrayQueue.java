@@ -7,13 +7,13 @@ public class ArrayQueue<T> {
     int s = 0;
     int n = 0;
 
-    void add(T x) {
+    public void add(T x) {
         if (n + 1 > array.length) resize();
         array[(s + n) % array.length] = x;
         n++;
     }
 
-    T remove() {
+    public T remove() {
         T x = array[s];
         s = (s + 1) % array.length;
         n--;
@@ -21,7 +21,7 @@ public class ArrayQueue<T> {
         return x;
     }
 
-    void resize() {
+    private void resize() {
         T[] b = (T[]) new Object[max(1,2*n)];
         for (int i = 0; i < n; i++)
             b[i] = array[(i + s) % array.length];
