@@ -28,5 +28,20 @@ public class DualArrayDequeTest {
         assertEquals(n/2, dualArrayDeque.size());
     }
 
+    @Test
+    void testSet() {
+        int n = 100;
+        DualArrayDeque<Integer> dualArrayDeque = new DualArrayDeque<>();
+        for (int i = 0; i < n; i++)
+            dualArrayDeque.add(i, 0);
+        for (int i = 0; i < n; i++) {
+            assertEquals(new Integer(0), dualArrayDeque.get(i));
+            dualArrayDeque.set(i,i);
+        }
+        for (int i = 0; i < n; i++)
+            assertEquals(new Integer(i), dualArrayDeque.get(i));
+
+    }
+
 
 }

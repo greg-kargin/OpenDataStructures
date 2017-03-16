@@ -39,7 +39,7 @@ public class DualArrayDeque<T> {
         return x;
     }
 
-    void balance() {
+    private void balance() {
         int n = size();
         if (3 * front.size() < back.size())
             for (int i = 0; i < n/2 - front.size(); i++)
