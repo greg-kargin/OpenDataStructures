@@ -1,0 +1,10 @@
+2.1
+  The extra non-null value is a copy of last element from backing array, which appeared after
+  we moved every element left by 1.
+  [1,2,3,4,5] -> delete(3) -> [1,2,3,5,5]
+
+2.2
+  When we execute add(_, i) operation we copy sub-array (n - i, n) one position left, if we repeat
+  this operation multiple times we would get O(n^2) time. To make multiple insertions it is easier
+  to copy array by number of elements we are going to insert.
+  [1,2,3,4,5] -> [1,2,3,4,_,_,_,_,5] -> [1,2,3,4,9,9,9,9,5]
