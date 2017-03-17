@@ -7,6 +7,10 @@ public class ArrayDeque<T> {
     private int s = 0;
     private int n = 0;
 
+    public int size() {
+        return n;
+    }
+
     public T get(int i) {
         return array[(s + i) % array.length];
     }

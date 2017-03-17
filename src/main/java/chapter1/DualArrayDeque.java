@@ -4,24 +4,24 @@ public class DualArrayDeque<T> {
     private ArrayStack<T> front = new ArrayStack<>();
     private ArrayStack<T> back = new ArrayStack<>();
 
-    int size() {
+    public int size() {
         return front.size() + back.size();
     }
 
-    T get(int i) {
+    public T get(int i) {
         if (i < front.size())
             return front.get(front.size() - i - 1);
         else
             return back.get(i - front.size());
     }
 
-    T set(int i, T v) {
+    public T set(int i, T v) {
         if (i < front.size())
             return front.set(front.size() - i - 1, v);
         return back.set(i - front.size(), v);
     }
 
-    void add(int i, T x) {
+    public void add(int i, T x) {
         if (i < front.size())
             front.add(front.size() - i, x);
         else
@@ -29,7 +29,7 @@ public class DualArrayDeque<T> {
         balance();
     }
 
-    T remove(int i) {
+    public T remove(int i) {
         T x;
         if (i < front.size())
             x = front.remove(front.size() - i);
