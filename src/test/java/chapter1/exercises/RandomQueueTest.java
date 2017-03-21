@@ -7,7 +7,7 @@ import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TestRandomQueue {
+public class RandomQueueTest {
     @Test
     void test() {
         int n = 100;
